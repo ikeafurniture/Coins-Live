@@ -1,5 +1,5 @@
 //
-//  OAppDelegate.h
+//  OFAppDelegate.h
 //  Coins Live
 //
 //  Created by O on 6/10/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OAppDelegate : UIResponder <UIApplicationDelegate>
+@interface OFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

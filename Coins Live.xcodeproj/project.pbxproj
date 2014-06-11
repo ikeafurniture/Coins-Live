@@ -12,13 +12,24 @@
 		0E8670501947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
 		0E8670561947F8C200F1023F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E8670541947F8C200F1023F /* InfoPlist.strings */; };
 		0E8670581947F8C200F1023F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8670571947F8C200F1023F /* main.m */; };
-		0E86705C1947F8C200F1023F /* OAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E86705B1947F8C200F1023F /* OAppDelegate.m */; };
+		0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E86705B1947F8C200F1023F /* OFAppDelegate.m */; };
 		0E86705E1947F8C200F1023F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E86705D1947F8C200F1023F /* Images.xcassets */; };
 		0E8670651947F8C200F1023F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8670641947F8C200F1023F /* XCTest.framework */; };
 		0E8670661947F8C200F1023F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704B1947F8C200F1023F /* Foundation.framework */; };
 		0E8670671947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
 		0E86706F1947F8C200F1023F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E86706D1947F8C200F1023F /* InfoPlist.strings */; };
 		0E8670711947F8C200F1023F /* Coins_LiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8670701947F8C200F1023F /* Coins_LiveTests.m */; };
+		0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
+		0ED205CA1947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
+		0ED205CC1947FB0E002FF6C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */; };
+		0ED205CD1947FB0F002FF6C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */; };
+		0ED205D01947FCDD002FF6C7 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205CF1947FCDD002FF6C7 /* Market.m */; };
+		0ED205D11947FCDD002FF6C7 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205CF1947FCDD002FF6C7 /* Market.m */; };
+		0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D31947FF4D002FF6C7 /* PricePoint.m */; };
+		0ED205D51947FF4D002FF6C7 /* PricePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D31947FF4D002FF6C7 /* PricePoint.m */; };
+		0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D71947FF6D002FF6C7 /* TickersController.m */; };
+		0ED205D91947FF6D002FF6C7 /* TickersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D71947FF6D002FF6C7 /* TickersController.m */; };
+		6C4BC82422F04FF88EF97FF8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A87EF0F8464D9493E2AD1E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +51,25 @@
 		0E8670551947F8C200F1023F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E8670571947F8C200F1023F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E8670591947F8C200F1023F /* Coins Live-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coins Live-Prefix.pch"; sourceTree = "<group>"; };
-		0E86705A1947F8C200F1023F /* OAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAppDelegate.h; sourceTree = "<group>"; };
-		0E86705B1947F8C200F1023F /* OAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAppDelegate.m; sourceTree = "<group>"; };
+		0E86705A1947F8C200F1023F /* OFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFAppDelegate.h; sourceTree = "<group>"; };
+		0E86705B1947F8C200F1023F /* OFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFAppDelegate.m; sourceTree = "<group>"; };
 		0E86705D1947F8C200F1023F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E8670631947F8C200F1023F /* Coins LiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coins LiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8670641947F8C200F1023F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0E86706C1947F8C200F1023F /* Coins LiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Coins LiveTests-Info.plist"; sourceTree = "<group>"; };
 		0E86706E1947F8C200F1023F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E8670701947F8C200F1023F /* Coins_LiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coins_LiveTests.m; sourceTree = "<group>"; };
+		0ED205C71947FA93002FF6C7 /* OFMarketData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMarketData.h; sourceTree = "<group>"; };
+		0ED205C81947FA93002FF6C7 /* OFMarketData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFMarketData.m; sourceTree = "<group>"; };
+		0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0ED205CE1947FCDD002FF6C7 /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Market.h; sourceTree = "<group>"; };
+		0ED205CF1947FCDD002FF6C7 /* Market.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Market.m; sourceTree = "<group>"; };
+		0ED205D21947FF4D002FF6C7 /* PricePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricePoint.h; sourceTree = "<group>"; };
+		0ED205D31947FF4D002FF6C7 /* PricePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricePoint.m; sourceTree = "<group>"; };
+		0ED205D61947FF6D002FF6C7 /* TickersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickersController.h; sourceTree = "<group>"; };
+		0ED205D71947FF6D002FF6C7 /* TickersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickersController.m; sourceTree = "<group>"; };
+		A6A87EF0F8464D9493E2AD1E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E822DFE78256412782CCF3E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,7 @@
 				0E86704E1947F8C200F1023F /* CoreGraphics.framework in Frameworks */,
 				0E8670501947F8C200F1023F /* UIKit.framework in Frameworks */,
 				0E86704C1947F8C200F1023F /* Foundation.framework in Frameworks */,
+				6C4BC82422F04FF88EF97FF8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 				0E86706A1947F8C200F1023F /* Coins LiveTests */,
 				0E86704A1947F8C100F1023F /* Frameworks */,
 				0E8670491947F8C100F1023F /* Products */,
+				E822DFE78256412782CCF3E0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +124,7 @@
 				0E86704D1947F8C200F1023F /* CoreGraphics.framework */,
 				0E86704F1947F8C200F1023F /* UIKit.framework */,
 				0E8670641947F8C200F1023F /* XCTest.framework */,
+				A6A87EF0F8464D9493E2AD1E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,8 +132,12 @@
 		0E8670511947F8C200F1023F /* Coins Live */ = {
 			isa = PBXGroup;
 			children = (
-				0E86705A1947F8C200F1023F /* OAppDelegate.h */,
-				0E86705B1947F8C200F1023F /* OAppDelegate.m */,
+				0E86705A1947F8C200F1023F /* OFAppDelegate.h */,
+				0E86705B1947F8C200F1023F /* OFAppDelegate.m */,
+				0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */,
+				0ED205C41947FA53002FF6C7 /* Models */,
+				0ED205C51947FA65002FF6C7 /* Views */,
+				0ED205C61947FA69002FF6C7 /* Controllers */,
 				0E86705D1947F8C200F1023F /* Images.xcassets */,
 				0E8670521947F8C200F1023F /* Supporting Files */,
 			);
@@ -144,6 +173,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0ED205C41947FA53002FF6C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0ED205C71947FA93002FF6C7 /* OFMarketData.h */,
+				0ED205C81947FA93002FF6C7 /* OFMarketData.m */,
+				0ED205CE1947FCDD002FF6C7 /* Market.h */,
+				0ED205CF1947FCDD002FF6C7 /* Market.m */,
+				0ED205D21947FF4D002FF6C7 /* PricePoint.h */,
+				0ED205D31947FF4D002FF6C7 /* PricePoint.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0ED205C51947FA65002FF6C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0ED205C61947FA69002FF6C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0ED205D61947FF6D002FF6C7 /* TickersController.h */,
+				0ED205D71947FF6D002FF6C7 /* TickersController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E8670741947F8C200F1023F /* Build configuration list for PBXNativeTarget "Coins Live" */;
 			buildPhases = (
+				569819D456C8474AAFB2BE11 /* Check Pods Manifest.lock */,
 				0E8670441947F8C100F1023F /* Sources */,
 				0E8670451947F8C100F1023F /* Frameworks */,
 				0E8670461947F8C100F1023F /* Resources */,
+				7ABC8C3907A34C278707B97F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +282,7 @@
 			files = (
 				0E8670561947F8C200F1023F /* InfoPlist.strings in Resources */,
 				0E86705E1947F8C200F1023F /* Images.xcassets in Resources */,
+				0ED205CC1947FB0E002FF6C7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,18 +291,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E86706F1947F8C200F1023F /* InfoPlist.strings in Resources */,
+				0ED205CD1947FB0F002FF6C7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		569819D456C8474AAFB2BE11 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ABC8C3907A34C278707B97F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E8670441947F8C100F1023F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E86705C1947F8C200F1023F /* OAppDelegate.m in Sources */,
+				0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */,
+				0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */,
+				0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */,
 				0E8670581947F8C200F1023F /* main.m in Sources */,
+				0ED205D01947FCDD002FF6C7 /* Market.m in Sources */,
+				0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED205D51947FF4D002FF6C7 /* PricePoint.m in Sources */,
+				0ED205D91947FF6D002FF6C7 /* TickersController.m in Sources */,
+				0ED205CA1947FA93002FF6C7 /* OFMarketData.m in Sources */,
 				0E8670711947F8C200F1023F /* Coins_LiveTests.m in Sources */,
+				0ED205D11947FCDD002FF6C7 /* Market.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +458,7 @@
 		};
 		0E8670751947F8C200F1023F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E822DFE78256412782CCF3E0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -368,6 +472,7 @@
 		};
 		0E8670761947F8C200F1023F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E822DFE78256412782CCF3E0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -438,6 +543,7 @@
 				0E8670761947F8C200F1023F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E8670771947F8C200F1023F /* Build configuration list for PBXNativeTarget "Coins LiveTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +552,7 @@
 				0E8670791947F8C200F1023F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
