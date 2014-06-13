@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E23480519492D1800B60AA6 /* iPhone.storyboard */; };
+		0E70595F1948E37C007BE558 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595A1948E37C007BE558 /* TickerCell.m */; };
+		0E7059601948E37C007BE558 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595C1948E37C007BE558 /* Ticker.m */; };
+		0E7059611948E37C007BE558 /* PercentChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595E1948E37C007BE558 /* PercentChange.m */; };
+		0E7059641948E3DD007BE558 /* PriceGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7059631948E3DD007BE558 /* PriceGraph.m */; };
 		0E86704C1947F8C200F1023F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704B1947F8C200F1023F /* Foundation.framework */; };
 		0E86704E1947F8C200F1023F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704D1947F8C200F1023F /* CoreGraphics.framework */; };
 		0E8670501947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
@@ -21,8 +26,6 @@
 		0E8670711947F8C200F1023F /* Coins_LiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8670701947F8C200F1023F /* Coins_LiveTests.m */; };
 		0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
 		0ED205CA1947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
-		0ED205CC1947FB0E002FF6C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */; };
-		0ED205CD1947FB0F002FF6C7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */; };
 		0ED205D01947FCDD002FF6C7 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205CF1947FCDD002FF6C7 /* Market.m */; };
 		0ED205D11947FCDD002FF6C7 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205CF1947FCDD002FF6C7 /* Market.m */; };
 		0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D31947FF4D002FF6C7 /* PricePoint.m */; };
@@ -43,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E23480519492D1800B60AA6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		0E7059591948E37C007BE558 /* TickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerCell.h; sourceTree = "<group>"; };
+		0E70595A1948E37C007BE558 /* TickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerCell.m; sourceTree = "<group>"; };
+		0E70595B1948E37C007BE558 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
+		0E70595C1948E37C007BE558 /* Ticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticker.m; sourceTree = "<group>"; };
+		0E70595D1948E37C007BE558 /* PercentChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentChange.h; sourceTree = "<group>"; };
+		0E70595E1948E37C007BE558 /* PercentChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentChange.m; sourceTree = "<group>"; };
+		0E7059621948E3DD007BE558 /* PriceGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceGraph.h; sourceTree = "<group>"; };
+		0E7059631948E3DD007BE558 /* PriceGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceGraph.m; sourceTree = "<group>"; };
 		0E8670481947F8C100F1023F /* Coins Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coins Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E86704B1947F8C200F1023F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E86704D1947F8C200F1023F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,7 +73,6 @@
 		0E8670701947F8C200F1023F /* Coins_LiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coins_LiveTests.m; sourceTree = "<group>"; };
 		0ED205C71947FA93002FF6C7 /* OFMarketData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMarketData.h; sourceTree = "<group>"; };
 		0ED205C81947FA93002FF6C7 /* OFMarketData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFMarketData.m; sourceTree = "<group>"; };
-		0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0ED205CE1947FCDD002FF6C7 /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Market.h; sourceTree = "<group>"; };
 		0ED205CF1947FCDD002FF6C7 /* Market.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Market.m; sourceTree = "<group>"; };
 		0ED205D21947FF4D002FF6C7 /* PricePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricePoint.h; sourceTree = "<group>"; };
@@ -134,10 +145,10 @@
 			children = (
 				0E86705A1947F8C200F1023F /* OFAppDelegate.h */,
 				0E86705B1947F8C200F1023F /* OFAppDelegate.m */,
-				0ED205CB1947FB0E002FF6C7 /* Storyboard.storyboard */,
+				0E23480519492D1800B60AA6 /* iPhone.storyboard */,
+				0ED205C61947FA69002FF6C7 /* Controllers */,
 				0ED205C41947FA53002FF6C7 /* Models */,
 				0ED205C51947FA65002FF6C7 /* Views */,
-				0ED205C61947FA69002FF6C7 /* Controllers */,
 				0E86705D1947F8C200F1023F /* Images.xcassets */,
 				0E8670521947F8C200F1023F /* Supporting Files */,
 			);
@@ -189,6 +200,14 @@
 		0ED205C51947FA65002FF6C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E7059621948E3DD007BE558 /* PriceGraph.h */,
+				0E7059631948E3DD007BE558 /* PriceGraph.m */,
+				0E7059591948E37C007BE558 /* TickerCell.h */,
+				0E70595A1948E37C007BE558 /* TickerCell.m */,
+				0E70595B1948E37C007BE558 /* Ticker.h */,
+				0E70595C1948E37C007BE558 /* Ticker.m */,
+				0E70595D1948E37C007BE558 /* PercentChange.h */,
+				0E70595E1948E37C007BE558 /* PercentChange.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -252,6 +271,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = O;
 				TargetAttributes = {
+					0E8670471947F8C100F1023F = {
+						DevelopmentTeam = QBPVDE2CDG;
+					};
 					0E8670621947F8C200F1023F = {
 						TestTargetID = 0E8670471947F8C100F1023F;
 					};
@@ -281,8 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E8670561947F8C200F1023F /* InfoPlist.strings in Resources */,
+				0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */,
 				0E86705E1947F8C200F1023F /* Images.xcassets in Resources */,
-				0ED205CC1947FB0E002FF6C7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E86706F1947F8C200F1023F /* InfoPlist.strings in Resources */,
-				0ED205CD1947FB0F002FF6C7 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,12 +356,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7059641948E3DD007BE558 /* PriceGraph.m in Sources */,
 				0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */,
 				0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */,
 				0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */,
 				0E8670581947F8C200F1023F /* main.m in Sources */,
 				0ED205D01947FCDD002FF6C7 /* Market.m in Sources */,
+				0E7059601948E37C007BE558 /* Ticker.m in Sources */,
+				0E7059611948E37C007BE558 /* PercentChange.m in Sources */,
 				0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */,
+				0E70595F1948E37C007BE558 /* TickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,10 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coins Live/Coins Live-Prefix.pch";
 				INFOPLIST_FILE = "Coins Live/Coins Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -476,10 +505,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coins Live/Coins Live-Prefix.pch";
 				INFOPLIST_FILE = "Coins Live/Coins Live-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,14 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Market.h"
 
 @protocol MarketDataSource <NSObject>
+
+#pragma Market Info
+- (CGFloat)price:(NSString *)market;
+- (CGFloat)lastPrice:(NSString *)market;
+- (NSString *)displayName:(NSString *)market;
+- (NSString *)currency:(NSString *)market;
+- (NSString *)item:(NSString *)market;
 
 #pragma Pusher
 - (void)subscribeToMarket:(NSString *)market;
 - (void)unsubscribeFromMarket:(NSString *)market;
 
-#pragma History
+#pragma Price History
+- (void)fetchHistoricalPrices;
+- (CGFloat)percentChange:(NSString *)market inRange:(NSInteger)range;
+- (CGFloat)amountChange:(NSString *)market inRange:(NSInteger)range;
+- (NSArray *)prices:(NSString *)market inRange:(NSInteger)range;
 
 @end
 

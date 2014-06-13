@@ -21,6 +21,6 @@
 - (id)initWithSymbol:(NSString *)symbol;
 - (void)updatePrice:(PricePoint *)price;
 - (void)setPrices:(NSArray *)prices forRange:(NSInteger)range;
-- (NSArray *)getPricesInRange:(NSInteger)range; //call this pricesinrange
+- (NSArray *)pricesInRange:(NSInteger)range;
 //percent change in ranges
 @end

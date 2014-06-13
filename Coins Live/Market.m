@@ -121,7 +121,7 @@
     }
 }
 
-- (NSArray *)getPricesInRange:(NSInteger)range
+- (NSArray *)pricesInRange:(NSInteger)range
 {
     if (range == 3600)
         return self.hourPrices;

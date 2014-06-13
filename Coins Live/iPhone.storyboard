@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RU3-yU-Kzh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Tickers Controller-->
+        <scene sceneID="u8B-5f-yqm">
+            <objects>
+                <viewController id="RU3-yU-Kzh" customClass="TickersController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cyc-jp-rSq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Co6-c7-hJR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Gb-bb-Tif">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="165" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-Ye-1uQ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="183"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <color key="separatorColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Ticker" rowHeight="161" id="GHK-jc-ThB" customClass="TickerCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="161"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHK-jc-ThB" id="moZ-Di-mne">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoI-yD-Nli" customClass="PriceGraph">
+                                                    <rect key="frame" x="0.0" y="46" width="568" height="116"/>
+                                                    <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BTC/USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-N7-Y9a" userLabel="Currency">
+                                                    <rect key="frame" x="6" y="28" width="170" height="18"/>
+                                                    <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" white="0.60404311131386856" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Bitstamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGg-gN-lq9" userLabel="Name">
+                                                    <rect key="frame" x="6" y="2" width="155" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="-3"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="$838.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-PP-dut" userLabel="Ticker" customClass="Ticker">
+                                                    <rect key="frame" x="159" y="2" width="155" height="30"/>
+                                                    <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" white="0.45013115879999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+31.51 (3.56%)" textAlignment="right" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gNd-fT-ilu" userLabel="Percent Change" customClass="PercentChange">
+                                                    <rect key="frame" x="144" y="28" width="170" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.0" green="0.73734032849999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="yoI-yD-Nli" firstAttribute="top" secondItem="MV3-N7-Y9a" secondAttribute="top" constant="18" id="4Fz-4S-kDr"/>
+                                                <constraint firstAttribute="trailing" secondItem="gNd-fT-ilu" secondAttribute="trailing" constant="6" id="Bpw-XN-dOi"/>
+                                                <constraint firstItem="LH2-PP-dut" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" constant="2" id="GZI-sY-t0M"/>
+                                                <constraint firstItem="MV3-N7-Y9a" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" constant="6" id="JGP-Lk-ZUe"/>
+                                                <constraint firstItem="gNd-fT-ilu" firstAttribute="top" secondItem="LH2-PP-dut" secondAttribute="bottom" constant="-3" id="WHg-3F-hkX"/>
+                                                <constraint firstItem="yoI-yD-Nli" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" id="YdX-3j-MVv"/>
+                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" constant="6" id="cbp-pu-iI1"/>
+                                                <constraint firstAttribute="centerX" secondItem="yoI-yD-Nli" secondAttribute="centerX" id="cln-Pr-l6h"/>
+                                                <constraint firstAttribute="trailing" secondItem="yoI-yD-Nli" secondAttribute="trailing" id="icl-L6-4AJ"/>
+                                                <constraint firstItem="MV3-N7-Y9a" firstAttribute="top" secondItem="cGg-gN-lq9" secondAttribute="bottom" constant="-3" id="muW-ac-EJN"/>
+                                                <constraint firstAttribute="bottom" secondItem="yoI-yD-Nli" secondAttribute="bottom" id="nCZ-MR-Zwe"/>
+                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" constant="2" id="o7f-DS-HUT"/>
+                                                <constraint firstAttribute="trailing" secondItem="LH2-PP-dut" secondAttribute="trailing" constant="6" id="omr-17-FQY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="currency" destination="MV3-N7-Y9a" id="8R2-dB-lj7"/>
+                                            <outlet property="graph" destination="yoI-yD-Nli" id="VHi-ed-Rky"/>
+                                            <outlet property="name" destination="cGg-gN-lq9" id="Oao-Le-NeP"/>
+                                            <outlet property="percent" destination="gNd-fT-ilu" id="A2K-AC-dY1"/>
+                                            <outlet property="ticker" destination="LH2-PP-dut" id="8h6-HB-CsD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RU3-yU-Kzh" id="dQe-XY-Ijv"/>
+                                    <outlet property="delegate" destination="RU3-yU-Kzh" id="uaD-Tf-ryN"/>
+                                </connections>
+                            </tableView>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-gR-YUG">
+                                <rect key="frame" x="0.0" y="525" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qcq-Wy-7Op"/>
+                                    <barButtonItem width="42" style="plain" id="fXS-b4-fwb">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="E4d-sW-gHM">
+                                            <rect key="frame" x="9" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" hint="" label="Hour"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="H">
+                                                <color key="titleColor" white="0.50376368613138689" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.50376368613138689" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeRange:" destination="RU3-yU-Kzh" eventType="touchUpInside" id="Jyo-qr-P5F"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" id="DM2-17-3zn">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oPm-0K-xfl">
+                                            <rect key="frame" x="61" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="Day"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="D">
+                                                <color key="titleColor" white="0.50376368613138689" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.50376368613138689" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeRange:" destination="RU3-yU-Kzh" eventType="touchUpInside" id="gdA-te-Kfh"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" id="trW-ph-nb6">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="feV-46-vWe">
+                                            <rect key="frame" x="113" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="Week"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="W">
+                                                <color key="titleColor" white="0.50376368613138689" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.50376368613138689" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeRange:" destination="RU3-yU-Kzh" eventType="touchUpInside" id="R8v-rY-Yty"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" id="rQW-Ui-0Vp">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WnY-Lz-g4T">
+                                            <rect key="frame" x="165" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="Month"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="M">
+                                                <color key="titleColor" white="0.50376368613138689" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.50376368613138689" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeRange:" destination="RU3-yU-Kzh" eventType="touchUpInside" id="f9U-6R-z17"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" id="gfL-gh-tmu">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wgp-lM-a7o">
+                                            <rect key="frame" x="217" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="Year"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Y">
+                                                <color key="titleColor" white="0.50376368613138689" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.50376368613138689" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="changeRange:" destination="RU3-yU-Kzh" eventType="touchUpInside" id="Mcq-IY-rcL"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" id="AbY-xX-TB1">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HX6-4b-FZA">
+                                            <rect key="frame" x="269" y="-2" width="42" height="48"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="Settings"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                            <inset key="contentEdgeInsets" minX="1" minY="-7" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="+">
+                                                <color key="titleColor" white="0.5037636861" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5037636861" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="otW-IR-UYI"/>
+                                </items>
+                                <color key="barTintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6GU-Ye-1uQ" firstAttribute="leading" secondItem="6Gb-bb-Tif" secondAttribute="leading" id="HWb-Fi-e9G"/>
+                            <constraint firstItem="cu1-gR-YUG" firstAttribute="leading" secondItem="6Gb-bb-Tif" secondAttribute="leading" id="I7S-rb-RRM"/>
+                            <constraint firstItem="Co6-c7-hJR" firstAttribute="top" secondItem="6GU-Ye-1uQ" secondAttribute="bottom" priority="999" constant="44" id="QmR-Lo-tsW"/>
+                            <constraint firstItem="Co6-c7-hJR" firstAttribute="top" secondItem="cu1-gR-YUG" secondAttribute="bottom" id="SJD-4P-ooz"/>
+                            <constraint firstItem="6GU-Ye-1uQ" firstAttribute="top" secondItem="Cyc-jp-rSq" secondAttribute="bottom" id="XCL-C2-2DL"/>
+                            <constraint firstAttribute="trailing" secondItem="6GU-Ye-1uQ" secondAttribute="trailing" id="YcE-ae-Bi4"/>
+                            <constraint firstAttribute="trailing" secondItem="cu1-gR-YUG" secondAttribute="trailing" id="rWq-Ih-Cu4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6GU-Ye-1uQ" id="G49-Ad-L6L"/>
+                        <outletCollection property="rangeButtons" destination="E4d-sW-gHM" id="yz9-mx-779"/>
+                        <outletCollection property="rangeButtons" destination="oPm-0K-xfl" id="SkN-Pb-2yX"/>
+                        <outletCollection property="rangeButtons" destination="feV-46-vWe" id="OR8-pH-mKh"/>
+                        <outletCollection property="rangeButtons" destination="WnY-Lz-g4T" id="Owj-fn-7xj"/>
+                        <outletCollection property="rangeButtons" destination="Wgp-lM-a7o" id="E0T-Ks-G9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBQ-cb-Vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3035" y="188"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

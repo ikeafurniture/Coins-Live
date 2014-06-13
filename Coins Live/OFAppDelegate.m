@@ -10,6 +10,10 @@
 
 @implementation OFAppDelegate
 
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
