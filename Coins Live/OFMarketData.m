@@ -121,7 +121,7 @@
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:@"http://history.coins-live.io:8000/prices"]];
         [request setHTTPMethod:@"POST"];
-        [request setValue:[NSString stringWithFormat:@"%d",[json length]] forHTTPHeaderField:@"Content-Length"];
+        [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[json length]] forHTTPHeaderField:@"Content-Length"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setHTTPBody:json];
         

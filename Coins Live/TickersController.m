@@ -28,7 +28,10 @@
     self.markets = [NSKeyedUnarchiver unarchiveObjectWithData:
                     [[NSUserDefaults standardUserDefaults] objectForKey:@"Markets"]];
     if (!self.markets)
-        self.markets = [@[@"bitstampBTCUSD",
+        self.markets = [@[@"lakebtcBTCUSD",
+                          @"bitcurexBTCPLN",
+                          
+                          @"bitstampBTCUSD",
                           @"btceBTCUSD",
                           @"coinbaseBTCUSD",
                           @"bitfinexBTCUSD",
@@ -39,14 +42,21 @@
                           @"btceLTCUSD",
                           ] mutableCopy];
     
+    self.marketDataSource = [[OFMarketData alloc] initWithMarkets:self.markets];
+    [self recursivelyReloadGraphs];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(price:)
-                                                 name:@"price" object:nil];
+                                                 name:@"price"
+                                               object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(prices:)
-                                                 name:@"prices" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
-    self.marketDataSource = [[OFMarketData alloc] initWithMarkets:self.markets];
+                                                 name:@"prices"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(enterForeground)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -66,17 +76,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TickerCell *cell = (TickerCell *)[tableView dequeueReusableCellWithIdentifier:@"Ticker" forIndexPath:indexPath];
+    TickerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Ticker"
+                                                       forIndexPath:indexPath];
     
     //Info
-    NSString *symbol = self.markets[indexPath.row];
-    NSString *displayName = [self.marketDataSource displayName:symbol];
-    NSString *currency = [self.marketDataSource currency:symbol];
-    NSString *item = [self.marketDataSource item:symbol];
-    CGFloat price = [self.marketDataSource price:symbol];
-    CGFloat percentChange = [self.marketDataSource percentChange:symbol inRange:self.range];
-    CGFloat amountChange = [self.marketDataSource amountChange:symbol inRange:self.range];
-    NSArray *prices = [self.marketDataSource prices:symbol inRange:self.range];
+    NSString *market = self.markets[indexPath.row];
+    NSString *displayName = [self.marketDataSource displayName:market];
+    NSString *currency = [self.marketDataSource currency:market];
+    NSString *item = [self.marketDataSource item:market];
+    CGFloat price = [self.marketDataSource price:market];
+    NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
     
     //Set Values
     cell.name.text = displayName;
@@ -84,7 +93,9 @@
     cell.ticker.currency = currency;
     cell.ticker.lastPrice = price;
     cell.ticker.price = price;
-    [cell.percent updateChange:percentChange andAmount:amountChange];
+    
+    [cell.percent updateChange:[self.marketDataSource percentChange:market inRange:self.range]
+                     andAmount:[self.marketDataSource amountChange:market inRange:self.range]];
     
     //Graph
     cell.graph.range = self.range;
@@ -152,20 +163,25 @@
 
 - (void)price:(NSNotification *)notification
 {
-    NSString *symbol = notification.userInfo[@"symbol"];
-    TickerCell *cell = [self cellForMarket:symbol];
+    NSString *market = notification.userInfo[@"symbol"];
+    TickerCell *cell = [self cellForMarket:market];
     
-    NSArray *prices = [self.marketDataSource prices:symbol inRange:self.range];
+    if ([[self.tableView visibleCells] containsObject:cell]) {
     
-    cell.ticker.lastPrice = [self.marketDataSource lastPrice:symbol];
-    cell.ticker.price = [self.marketDataSource price:symbol];
-    cell.graph.prices = [prices mutableCopy];
-    cell.graph.range = self.range;
-    [cell.graph setNeedsDisplay];
-    PricePoint *firstPrice = [prices firstObject];
-    CGFloat amount = [self.marketDataSource amountChange:symbol inRange:self.range];
-    CGFloat change = [self.marketDataSource percentChange:symbol inRange:self.range];
-    [cell.percent updateChange:change andAmount:amount];
+        //Graph
+        NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
+        cell.graph.prices = [prices mutableCopy];
+        cell.graph.range = self.range;
+        [cell.graph setNeedsDisplay];
+        
+        //Ticker
+        cell.ticker.lastPrice = [self.marketDataSource lastPrice:market];
+        cell.ticker.price = [self.marketDataSource price:market];
+        
+        //Change
+        [cell.percent updateChange:[self.marketDataSource percentChange:market inRange:self.range]
+                         andAmount:[self.marketDataSource amountChange:market inRange:self.range]];
+    }
 }
 
 - (void)prices:(NSNotification *)notification
@@ -174,19 +190,20 @@
     TickerCell *cell = [self cellForMarket:market];
     
     if ([[self.tableView visibleCells] containsObject:cell]) {
+        
+        //Graph
         NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
         cell.graph.prices = [prices mutableCopy];
         cell.graph.range = self.range;
         [cell.graph setNeedsDisplay];
         
-        
-        cell.ticker.lastPrice = [self.marketDataSource price:market];
+        //Ticker
+        cell.ticker.lastPrice = [self.marketDataSource lastPrice:market];
         cell.ticker.price = [self.marketDataSource price:market];
         
-        PricePoint *firstPrice = [prices firstObject];
-        CGFloat amount = [self.marketDataSource amountChange:market inRange:self.range];
-        CGFloat change = [self.marketDataSource percentChange:market inRange:self.range];
-        [cell.percent updateChange:change andAmount:amount];
+        //Change
+        [cell.percent updateChange:[self.marketDataSource percentChange:market inRange:self.range]
+                         andAmount:[self.marketDataSource amountChange:market inRange:self.range]];
     }
 }
 
@@ -194,7 +211,7 @@
 - (void)recursivelyReloadGraphs
 {
     [self reloadGraphs];
-#warning WEIRD
+    #warning WEIRD
     double delayInSeconds = 2; //FIX THIS!! Should only reload so often in hour view
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -207,14 +224,13 @@
     for (TickerCell *cell in [self.tableView visibleCells]) {
         NSString *market = self.markets[[self.tableView indexPathForCell:cell].row];
         NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
+       
         cell.graph.prices = [prices mutableCopy];
         cell.graph.range = self.range;
-        
         [cell.graph setNeedsDisplay];
         
-        CGFloat amount = [self.marketDataSource amountChange:market inRange:self.range];
-        CGFloat change = [self.marketDataSource percentChange:market inRange:self.range];
-        [cell.percent updateChange:change andAmount:amount];
+        [cell.percent updateChange:[self.marketDataSource percentChange:market inRange:self.range]
+                         andAmount:[self.marketDataSource amountChange:market inRange:self.range]];
     }
 }
 

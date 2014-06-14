@@ -7,6 +7,7 @@
         <!--Tickers Controller-->
         <scene sceneID="u8B-5f-yqm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBQ-cb-Vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="RU3-yU-Kzh" customClass="TickersController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cyc-jp-rSq"/>
@@ -44,14 +45,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Bitstamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGg-gN-lq9" userLabel="Name">
-                                                    <rect key="frame" x="6" y="2" width="155" height="30"/>
+                                                    <rect key="frame" x="6" y="0.0" width="155" height="30"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="-3"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="$838.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-PP-dut" userLabel="Ticker" customClass="Ticker">
-                                                    <rect key="frame" x="159" y="2" width="155" height="30"/>
+                                                    <rect key="frame" x="159" y="0.0" width="155" height="30"/>
                                                     <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
@@ -71,16 +72,16 @@
                                             <constraints>
                                                 <constraint firstItem="yoI-yD-Nli" firstAttribute="top" secondItem="MV3-N7-Y9a" secondAttribute="top" constant="18" id="4Fz-4S-kDr"/>
                                                 <constraint firstAttribute="trailing" secondItem="gNd-fT-ilu" secondAttribute="trailing" constant="6" id="Bpw-XN-dOi"/>
-                                                <constraint firstItem="LH2-PP-dut" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" constant="2" id="GZI-sY-t0M"/>
+                                                <constraint firstItem="LH2-PP-dut" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" id="GZI-sY-t0M"/>
                                                 <constraint firstItem="MV3-N7-Y9a" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" constant="6" id="JGP-Lk-ZUe"/>
-                                                <constraint firstItem="gNd-fT-ilu" firstAttribute="top" secondItem="LH2-PP-dut" secondAttribute="bottom" constant="-3" id="WHg-3F-hkX"/>
+                                                <constraint firstItem="gNd-fT-ilu" firstAttribute="top" secondItem="LH2-PP-dut" secondAttribute="bottom" constant="-4" id="WHg-3F-hkX"/>
                                                 <constraint firstItem="yoI-yD-Nli" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" id="YdX-3j-MVv"/>
                                                 <constraint firstItem="cGg-gN-lq9" firstAttribute="leading" secondItem="moZ-Di-mne" secondAttribute="leading" constant="6" id="cbp-pu-iI1"/>
                                                 <constraint firstAttribute="centerX" secondItem="yoI-yD-Nli" secondAttribute="centerX" id="cln-Pr-l6h"/>
                                                 <constraint firstAttribute="trailing" secondItem="yoI-yD-Nli" secondAttribute="trailing" id="icl-L6-4AJ"/>
-                                                <constraint firstItem="MV3-N7-Y9a" firstAttribute="top" secondItem="cGg-gN-lq9" secondAttribute="bottom" constant="-3" id="muW-ac-EJN"/>
+                                                <constraint firstItem="MV3-N7-Y9a" firstAttribute="top" secondItem="cGg-gN-lq9" secondAttribute="bottom" constant="-4" id="muW-ac-EJN"/>
                                                 <constraint firstAttribute="bottom" secondItem="yoI-yD-Nli" secondAttribute="bottom" id="nCZ-MR-Zwe"/>
-                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" constant="2" id="o7f-DS-HUT"/>
+                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" id="o7f-DS-HUT"/>
                                                 <constraint firstAttribute="trailing" secondItem="LH2-PP-dut" secondAttribute="trailing" constant="6" id="omr-17-FQY"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -216,7 +217,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" id="AbY-xX-TB1">
+                                    <barButtonItem title="Item" width="42" style="plain" id="AbY-xX-TB1">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HX6-4b-FZA">
                                             <rect key="frame" x="269" y="-2" width="42" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -261,7 +262,6 @@
                         <outletCollection property="rangeButtons" destination="Wgp-lM-a7o" id="E0T-Ks-G9d"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UBQ-cb-Vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3035" y="188"/>
         </scene>

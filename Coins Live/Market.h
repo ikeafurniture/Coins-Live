@@ -10,13 +10,14 @@
 #import "PricePoint.h"
 
 @interface Market : NSObject
-@property NSString *symbol;
 @property NSString *exchange;
 @property NSString *currency;
 @property NSString *item;
+@property NSString *symbol;
 @property NSString *displayName;
 @property CGFloat price;
 @property CGFloat lastPrice;
+@property NSInteger updated;
 
 - (id)initWithSymbol:(NSString *)symbol;
 - (void)updatePrice:(PricePoint *)price;

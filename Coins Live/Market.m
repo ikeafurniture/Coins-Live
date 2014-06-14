@@ -63,13 +63,16 @@
 
 - (void)updatePrice:(PricePoint *)price
 {
-    self.lastPrice = (self.price > 0) ? self.price : price.price;
-    self.price = price.price;
-    [self addPrice:price toPrices:self.hourPrices inRange:3600];
-    [self addPrice:price toPrices:self.dayPrices inRange:86400];
-    [self addPrice:price toPrices:self.weekPrices inRange:604800];
-    [self addPrice:price toPrices:self.monthPrices inRange:2592000];
-    [self addPrice:price toPrices:self.yearPrices inRange:31536000];
+    if (price.timestamp > self.updated) {
+        self.lastPrice = (self.price > 0) ? self.price : price.price;
+        self.price = price.price;
+        self.updated = price.timestamp;
+        [self addPrice:price toPrices:self.hourPrices inRange:3600];
+        [self addPrice:price toPrices:self.dayPrices inRange:86400];
+        [self addPrice:price toPrices:self.weekPrices inRange:604800];
+        [self addPrice:price toPrices:self.monthPrices inRange:2592000];
+        [self addPrice:price toPrices:self.yearPrices inRange:31536000];
+    }
 }
 
 - (void)addPrice:(PricePoint *)price toPrices:(NSMutableArray *)prices inRange:(NSInteger)range
@@ -117,7 +120,9 @@
 
     if (range == 3600) {
         PricePoint *mostRecent = [mutablePrices lastObject];
-        self.price = mostRecent.price;
+        if (mostRecent.timestamp > self.updated) {
+            self.price = mostRecent.price;
+        }
     }
 }
 
