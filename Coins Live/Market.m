@@ -120,7 +120,9 @@
 
     if (range == 3600) {
         PricePoint *mostRecent = [mutablePrices lastObject];
-        if (mostRecent.timestamp > self.updated) {
+        
+        if (mostRecent.timestamp >= self.updated) {
+            self.lastPrice = (self.price > 0) ? self.price : mostRecent.price;
             self.price = mostRecent.price;
         }
     }

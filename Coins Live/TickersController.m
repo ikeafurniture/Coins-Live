@@ -11,6 +11,7 @@
 #import "OFMarketData.h"
 #import "PricePoint.h"
 #import "Market.h"
+#import "EditMarketsViewController.h"
 
 @interface TickersController ()
 @property id <MarketDataSource> marketDataSource;
@@ -28,22 +29,24 @@
     self.markets = [NSKeyedUnarchiver unarchiveObjectWithData:
                     [[NSUserDefaults standardUserDefaults] objectForKey:@"Markets"]];
     if (!self.markets)
-        self.markets = [@[@"lakebtcBTCUSD",
-                          @"bitcurexBTCPLN",
-                          
-                          @"bitstampBTCUSD",
+        self.markets = [@[@"bitstampBTCUSD",
                           @"btceBTCUSD",
                           @"coinbaseBTCUSD",
                           @"bitfinexBTCUSD",
-                          @"virtexBTCCAD",
+                          //@"bitxBTCZAR",
+                          //@"lakebtcBTCUSD",
+                          //@"campbxBTCUSD",
                           @"btcchinaBTCCNY",
                           @"okcoinBTCCNY",
-                          @"btceNMCUSD",
-                          @"btceLTCUSD",
+                          //@"btceBTCEUR",
+                          @"bitcurexBTCPLN",
+                          @"virtexBTCCAD",
+                          //@"bit2cBTCNIS"
                           ] mutableCopy];
     
     self.marketDataSource = [[OFMarketData alloc] initWithMarkets:self.markets];
     [self recursivelyReloadGraphs];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(price:)
@@ -59,16 +62,9 @@
                                                object:nil];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)enterForeground
 {
-    NSLog(@"ENTER FOREGROUND");
     [self.marketDataSource fetchHistoricalPrices];
-    //maybe cancel all animations? got to work out the little ticker glitches somehow
 }
 
 
@@ -93,14 +89,17 @@
     cell.ticker.currency = currency;
     cell.ticker.lastPrice = price;
     cell.ticker.price = price;
-    
     [cell.percent updateChange:[self.marketDataSource percentChange:market inRange:self.range]
                      andAmount:[self.marketDataSource amountChange:market inRange:self.range]];
+    
+    cell.name.textColor = [UIColor whiteColor];
     
     //Graph
     cell.graph.range = self.range;
     cell.graph.prices = [prices mutableCopy];
     [cell.graph setNeedsDisplay];
+    
+    
     return cell;
 }
 
@@ -156,6 +155,23 @@
     
     for (UIButton *button in self.rangeButtons)
         ([button isEqual:sender]) ? [sender setSelected:YES] : [button setSelected:NO];
+}
+
+- (void)edit:(UIButton *)sender
+{
+    
+    [self performSegueWithIdentifier:@"Edit" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Edit"])
+    {
+        EditMarketsViewController *dest = [[segue destinationViewController] childViewControllers][0];
+        dest.marketDataSource = self.marketDataSource;
+        dest.markets = self.markets;
+        dest.editingTableView = self.tableView;
+    }
 }
 
 

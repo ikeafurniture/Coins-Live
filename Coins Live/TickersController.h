@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *rangeButtons;
+- (IBAction)edit:(UIButton *)sender;
 - (IBAction)changeRange:(UIButton *)sender;
 @end

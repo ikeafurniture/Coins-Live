@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1D73E3195C989800548328 /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E2195C989800548328 /* MarketCell.m */; };
 		0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E23480519492D1800B60AA6 /* iPhone.storyboard */; };
 		0E70595F1948E37C007BE558 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595A1948E37C007BE558 /* TickerCell.m */; };
 		0E7059601948E37C007BE558 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595C1948E37C007BE558 /* Ticker.m */; };
@@ -32,6 +33,7 @@
 		0ED205D51947FF4D002FF6C7 /* PricePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D31947FF4D002FF6C7 /* PricePoint.m */; };
 		0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D71947FF6D002FF6C7 /* TickersController.m */; };
 		0ED205D91947FF6D002FF6C7 /* TickersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205D71947FF6D002FF6C7 /* TickersController.m */; };
+		0EF9BE85195C684B00E67FF4 /* EditMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9BE84195C684B00E67FF4 /* EditMarketsViewController.m */; };
 		6C4BC82422F04FF88EF97FF8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A87EF0F8464D9493E2AD1E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E1D73E1195C989800548328 /* MarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCell.h; sourceTree = "<group>"; };
+		0E1D73E2195C989800548328 /* MarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCell.m; sourceTree = "<group>"; };
 		0E23480519492D1800B60AA6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		0E7059591948E37C007BE558 /* TickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerCell.h; sourceTree = "<group>"; };
 		0E70595A1948E37C007BE558 /* TickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerCell.m; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		0ED205D31947FF4D002FF6C7 /* PricePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricePoint.m; sourceTree = "<group>"; };
 		0ED205D61947FF6D002FF6C7 /* TickersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickersController.h; sourceTree = "<group>"; };
 		0ED205D71947FF6D002FF6C7 /* TickersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickersController.m; sourceTree = "<group>"; };
+		0EF9BE83195C684B00E67FF4 /* EditMarketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMarketsViewController.h; sourceTree = "<group>"; };
+		0EF9BE84195C684B00E67FF4 /* EditMarketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMarketsViewController.m; sourceTree = "<group>"; };
 		A6A87EF0F8464D9493E2AD1E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E822DFE78256412782CCF3E0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +214,8 @@
 				0E70595C1948E37C007BE558 /* Ticker.m */,
 				0E70595D1948E37C007BE558 /* PercentChange.h */,
 				0E70595E1948E37C007BE558 /* PercentChange.m */,
+				0E1D73E1195C989800548328 /* MarketCell.h */,
+				0E1D73E2195C989800548328 /* MarketCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -217,6 +225,8 @@
 			children = (
 				0ED205D61947FF6D002FF6C7 /* TickersController.h */,
 				0ED205D71947FF6D002FF6C7 /* TickersController.m */,
+				0EF9BE83195C684B00E67FF4 /* EditMarketsViewController.h */,
+				0EF9BE84195C684B00E67FF4 /* EditMarketsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -360,12 +370,14 @@
 				0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */,
 				0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */,
 				0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */,
+				0EF9BE85195C684B00E67FF4 /* EditMarketsViewController.m in Sources */,
 				0E8670581947F8C200F1023F /* main.m in Sources */,
 				0ED205D01947FCDD002FF6C7 /* Market.m in Sources */,
 				0E7059601948E37C007BE558 /* Ticker.m in Sources */,
 				0E7059611948E37C007BE558 /* PercentChange.m in Sources */,
 				0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */,
 				0E70595F1948E37C007BE558 /* TickerCell.m in Sources */,
+				0E1D73E3195C989800548328 /* MarketCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
