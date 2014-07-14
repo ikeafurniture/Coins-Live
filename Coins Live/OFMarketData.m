@@ -24,6 +24,7 @@
     if (self) {
         [self connectPusher];
         [self loadMarkets:markets];
+        [self fetchAvailableMarkets];
         [self fetchHistoricalPrices];
     }
     return self;
@@ -69,10 +70,25 @@
 - (NSArray *)subscribedMarkets
 {
     NSMutableArray *markets = [@[] mutableCopy];
-    for (NSString *market in self.markets)
-        [markets addObject:market];
+    for (NSString *m in self.markets) {
+        Market *market = self.markets[m];
+        if (market.subscribed)
+            [markets addObject:m];
+    }
     return markets;
 }
+
+- (NSArray *)availableMarkets
+{
+    NSMutableArray *markets = [@[] mutableCopy];
+    for (NSString *m in self.markets) {
+        Market *market = self.markets[m];
+        if (!market.subscribed)
+            [markets addObject:m];
+    }
+    return [markets sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+}
+
 
 
 #pragma Pusher
@@ -80,14 +96,17 @@
 - (void)subscribeToMarket:(NSString *)market
 {
     [self.pusherClient subscribeToChannelNamed:market];
+    Market *m = [self marketWithSymbol:market];
+    m.subscribed = YES;
 }
 
 - (void)unsubscribeFromMarket:(NSString *)market
 {
     PTPusherChannel *channel = [self.pusherClient channelNamed:market];
     [channel unsubscribe];
+    Market *m = [self marketWithSymbol:market];
+    m.subscribed = NO;
 }
-
 
 
 #pragma Price History
@@ -95,8 +114,6 @@
 - (void)fetchHistoricalPrices
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    
-    //even better, get rid of all this.. just post self.lastUpdated and let the server figure it out!!
     
     NSString *range;
     NSInteger now = [[NSDate date] timeIntervalSince1970];
@@ -119,15 +136,11 @@
     
     if (json) {
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-        [request setURL:[NSURL URLWithString:@"http://history.coins-live.io:8000/prices"]];
+        [request setURL:[NSURL URLWithString:@"http://history.coinslive.io/prices"]];
         [request setHTTPMethod:@"POST"];
         [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[json length]] forHTTPHeaderField:@"Content-Length"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setHTTPBody:json];
-        
-        
-        
-        ///SUPER HORRIBLE CODE FIX THIS ALL!!!!!!
         
         NSDictionary *ranges = @{@"h": @3600,
                                  @"d": @86400,
@@ -154,6 +167,7 @@
                                            [[NSNotificationCenter defaultCenter] postNotificationName:@"prices"
                                                                                                object:nil
                                                                                              userInfo:@{@"symbol": market.symbol}];
+                                           //self.lastUpdated = [[NSDate date] timeIntervalSince1970];
                                        }
                                    }
                                    else {
@@ -217,13 +231,43 @@
     [self.pusherClient connect];
 }
 
+- (BOOL)pusher:(PTPusher *)pusher connectionWillAutomaticallyReconnect:(PTPusherConnection *)connection afterDelay:(NSTimeInterval)delay
+{
+    return YES;
+}
+
 - (void)loadMarkets:(NSArray *)markets
 {
     self.markets = [@{} mutableCopy];
     for (NSString *symbol in markets) {
         Market *market = [[Market alloc] initWithSymbol:symbol];
+        market.subscribed = YES;
         [self.markets setObject:market forKey:symbol];
         [self subscribeToMarket:market.symbol];
+    }
+}
+
+- (void)fetchAvailableMarkets
+{
+    NSArray *temp = @[@"bitstampBTCUSD",
+                      @"btceBTCUSD",
+                      @"coinbaseBTCUSD",
+                      @"bitfinexBTCUSD",
+                      @"lakebtcBTCUSD",
+                      @"campbxBTCUSD",
+                      @"btcchinaBTCCNY",
+                      @"okcoinBTCCNY",
+                      @"btceBTCEUR",
+                      @"bitcurexBTCPLN",
+                      @"virtexBTCCAD",
+                      @"bit2cBTCNIS"];
+    
+    for (NSString *symbol in temp) {
+        Market *market = [[Market alloc] initWithSymbol:symbol];
+        if (![self.markets objectForKey:symbol]) {
+            market.subscribed = NO;
+            [self.markets setObject:market forKey:symbol];
+        }
     }
 }
 

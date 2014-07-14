@@ -18,6 +18,7 @@
 @property CGFloat price;
 @property CGFloat lastPrice;
 @property NSInteger updated;
+@property BOOL subscribed;
 
 - (id)initWithSymbol:(NSString *)symbol;
 - (void)updatePrice:(PricePoint *)price;

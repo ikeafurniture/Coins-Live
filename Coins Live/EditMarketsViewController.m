@@ -1,6 +1,6 @@
 //
 //  EditMarketsViewController.m
-//  
+//
 //
 //  Created by O on 6/26/14.
 //
@@ -58,6 +58,8 @@
     [self.markets removeObjectAtIndex:sourceIndexPath.row];
     [self.markets insertObject:market atIndex:destinationIndexPath.row];
     [self.editingTableView reloadData];
+    [[NSUserDefaults standardUserDefaults] setObject:[self.markets copy] forKey:@"Markets"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,12 +72,43 @@
                          withRowAnimation:UITableViewRowAnimationFade];
         [self.editingTableView deleteRowsAtIndexPaths:@[indexPath]
                                      withRowAnimation:UITableViewRowAnimationNone];
+        [[NSUserDefaults standardUserDefaults] setObject:[self.markets copy] forKey:@"Markets"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+#warning keyed archiver??
     }
 }
 
 
 - (IBAction)close:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"add"])
+    {
+        AddMarketsViewController *dest = [segue destinationViewController];
+        dest.marketDataSource = self.marketDataSource;
+        dest.addMarket = self;
+        dest.markets = [[self.marketDataSource availableMarkets] mutableCopy];
+        
+    }
+}
+
+- (void)addMarket:(NSString *)market
+{
+  
+    [self.markets addObject:market];
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.markets count]-1 inSection:0]]
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.editingTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.markets count]-1 inSection:0]]
+                                 withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.marketDataSource subscribeToMarket:market];
+    [self.marketDataSource fetchHistoricalPrices];
+    
+    NSDictionary *marketsCopy = [self.markets copy];
+    [[NSUserDefaults standardUserDefaults] setObject:marketsCopy forKey:@"Markets"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 

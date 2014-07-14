@@ -33,7 +33,7 @@
         self.yearPrices = [@[] mutableCopy];
 
 
-        #warning Move display names server side?
+        #warning Move display names server side!!
 
         if ([self.exchange isEqualToString:@"mtgox"])
             self.displayName = @"Mt. Gox";
@@ -57,6 +57,25 @@
             self.displayName = @"FXBTC";
         else
             self.displayName = [self.exchange capitalizedString];
+    }
+    return self;
+}
+
+- (id)initWithSymbol:(NSString *)symbol andDisplayName:(NSString *)displayName
+{
+    self = [super init];
+    if (self) {
+        self.symbol = symbol;
+        self.displayName = displayName;
+        self.exchange = [symbol substringToIndex:symbol.length-6];
+        self.item = [[symbol substringToIndex:symbol.length-3] substringFromIndex:symbol.length-6];
+        self.currency = [symbol substringFromIndex:symbol.length-3];
+        
+        self.hourPrices = [@[] mutableCopy];
+        self.dayPrices = [@[] mutableCopy];
+        self.weekPrices = [@[] mutableCopy];
+        self.monthPrices = [@[] mutableCopy];
+        self.yearPrices = [@[] mutableCopy];
     }
     return self;
 }

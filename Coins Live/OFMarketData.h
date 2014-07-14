@@ -17,6 +17,8 @@
 - (NSString *)displayName:(NSString *)market;
 - (NSString *)currency:(NSString *)market;
 - (NSString *)item:(NSString *)market;
+- (NSArray *)subscribedMarkets;
+- (NSArray *)availableMarkets;
 
 #pragma Pusher
 - (void)subscribeToMarket:(NSString *)market;

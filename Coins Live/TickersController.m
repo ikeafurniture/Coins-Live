@@ -26,22 +26,14 @@
     [super viewDidLoad];
     self.range = 3600*24;
     
-    self.markets = [NSKeyedUnarchiver unarchiveObjectWithData:
-                    [[NSUserDefaults standardUserDefaults] objectForKey:@"Markets"]];
+    self.markets = [[NSUserDefaults standardUserDefaults] objectForKey:@"Markets"];
     if (!self.markets)
         self.markets = [@[@"bitstampBTCUSD",
                           @"btceBTCUSD",
                           @"coinbaseBTCUSD",
-                          @"bitfinexBTCUSD",
-                          //@"bitxBTCZAR",
-                          //@"lakebtcBTCUSD",
-                          //@"campbxBTCUSD",
-                          @"btcchinaBTCCNY",
                           @"okcoinBTCCNY",
-                          //@"btceBTCEUR",
-                          @"bitcurexBTCPLN",
-                          @"virtexBTCCAD",
-                          //@"bit2cBTCNIS"
+                          @"btcchinaBTCCNY",
+                          @"btceBTCEUR"
                           ] mutableCopy];
     
     self.marketDataSource = [[OFMarketData alloc] initWithMarkets:self.markets];
@@ -183,7 +175,7 @@
     TickerCell *cell = [self cellForMarket:market];
     
     if ([[self.tableView visibleCells] containsObject:cell]) {
-    
+        
         //Graph
         NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
         cell.graph.prices = [prices mutableCopy];
@@ -227,7 +219,7 @@
 - (void)recursivelyReloadGraphs
 {
     [self reloadGraphs];
-    #warning WEIRD
+#warning WEIRD
     double delayInSeconds = 2; //FIX THIS!! Should only reload so often in hour view
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -240,7 +232,7 @@
     for (TickerCell *cell in [self.tableView visibleCells]) {
         NSString *market = self.markets[[self.tableView indexPathForCell:cell].row];
         NSArray *prices = [self.marketDataSource prices:market inRange:self.range];
-       
+        
         cell.graph.prices = [prices mutableCopy];
         cell.graph.range = self.range;
         [cell.graph setNeedsDisplay];

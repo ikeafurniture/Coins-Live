@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E1D73E3195C989800548328 /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E2195C989800548328 /* MarketCell.m */; };
+		0E1D73E6195F043300548328 /* AddMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E5195F043300548328 /* AddMarketsViewController.m */; };
 		0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E23480519492D1800B60AA6 /* iPhone.storyboard */; };
 		0E70595F1948E37C007BE558 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595A1948E37C007BE558 /* TickerCell.m */; };
 		0E7059601948E37C007BE558 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595C1948E37C007BE558 /* Ticker.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		0E1D73E1195C989800548328 /* MarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCell.h; sourceTree = "<group>"; };
 		0E1D73E2195C989800548328 /* MarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCell.m; sourceTree = "<group>"; };
+		0E1D73E4195F043300548328 /* AddMarketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMarketsViewController.h; sourceTree = "<group>"; };
+		0E1D73E5195F043300548328 /* AddMarketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMarketsViewController.m; sourceTree = "<group>"; };
 		0E23480519492D1800B60AA6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		0E7059591948E37C007BE558 /* TickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerCell.h; sourceTree = "<group>"; };
 		0E70595A1948E37C007BE558 /* TickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerCell.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				0ED205D71947FF6D002FF6C7 /* TickersController.m */,
 				0EF9BE83195C684B00E67FF4 /* EditMarketsViewController.h */,
 				0EF9BE84195C684B00E67FF4 /* EditMarketsViewController.m */,
+				0E1D73E4195F043300548328 /* AddMarketsViewController.h */,
+				0E1D73E5195F043300548328 /* AddMarketsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				0E8670581947F8C200F1023F /* main.m in Sources */,
 				0ED205D01947FCDD002FF6C7 /* Market.m in Sources */,
 				0E7059601948E37C007BE558 /* Ticker.m in Sources */,
+				0E1D73E6195F043300548328 /* AddMarketsViewController.m in Sources */,
 				0E7059611948E37C007BE558 /* PercentChange.m in Sources */,
 				0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */,
 				0E70595F1948E37C007BE558 /* TickerCell.m in Sources */,
@@ -457,6 +463,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Coins Live";
+				PROVISIONING_PROFILE = "DC3DF763-71C8-4942-A5D3-5A8B836960CA";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -488,6 +496,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "Coins Live";
+				PROVISIONING_PROFILE = "DC3DF763-71C8-4942-A5D3-5A8B836960CA";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -505,7 +515,7 @@
 				GCC_PREFIX_HEADER = "Coins Live/Coins Live-Prefix.pch";
 				INFOPLIST_FILE = "Coins Live/Coins Live-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Coins Live";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -523,7 +533,7 @@
 				GCC_PREFIX_HEADER = "Coins Live/Coins Live-Prefix.pch";
 				INFOPLIST_FILE = "Coins Live/Coins Live-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Coins Live";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
