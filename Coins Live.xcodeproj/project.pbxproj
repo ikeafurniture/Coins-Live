@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E00FE5D1978D9F200E9AA32 /* PriceGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE5C1978D9F200E9AA32 /* PriceGraph.m */; };
+		0E00FE601978D9FB00E9AA32 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE5F1978D9FB00E9AA32 /* TickerCell.m */; };
+		0E00FE631978DA0300E9AA32 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE621978DA0300E9AA32 /* Ticker.m */; };
+		0E00FE661978DA0D00E9AA32 /* PercentChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE651978DA0D00E9AA32 /* PercentChange.m */; };
 		0E1D73E3195C989800548328 /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E2195C989800548328 /* MarketCell.m */; };
 		0E1D73E6195F043300548328 /* AddMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E5195F043300548328 /* AddMarketsViewController.m */; };
 		0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E23480519492D1800B60AA6 /* iPhone.storyboard */; };
-		0E70595F1948E37C007BE558 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595A1948E37C007BE558 /* TickerCell.m */; };
-		0E7059601948E37C007BE558 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595C1948E37C007BE558 /* Ticker.m */; };
-		0E7059611948E37C007BE558 /* PercentChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E70595E1948E37C007BE558 /* PercentChange.m */; };
-		0E7059641948E3DD007BE558 /* PriceGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7059631948E3DD007BE558 /* PriceGraph.m */; };
 		0E86704C1947F8C200F1023F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704B1947F8C200F1023F /* Foundation.framework */; };
 		0E86704E1947F8C200F1023F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704D1947F8C200F1023F /* CoreGraphics.framework */; };
 		0E8670501947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
@@ -49,19 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E00FE5B1978D9F200E9AA32 /* PriceGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceGraph.h; sourceTree = "<group>"; };
+		0E00FE5C1978D9F200E9AA32 /* PriceGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceGraph.m; sourceTree = "<group>"; };
+		0E00FE5E1978D9FB00E9AA32 /* TickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerCell.h; sourceTree = "<group>"; };
+		0E00FE5F1978D9FB00E9AA32 /* TickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerCell.m; sourceTree = "<group>"; };
+		0E00FE611978DA0300E9AA32 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
+		0E00FE621978DA0300E9AA32 /* Ticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticker.m; sourceTree = "<group>"; };
+		0E00FE641978DA0D00E9AA32 /* PercentChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentChange.h; sourceTree = "<group>"; };
+		0E00FE651978DA0D00E9AA32 /* PercentChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentChange.m; sourceTree = "<group>"; };
 		0E1D73E1195C989800548328 /* MarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCell.h; sourceTree = "<group>"; };
 		0E1D73E2195C989800548328 /* MarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCell.m; sourceTree = "<group>"; };
 		0E1D73E4195F043300548328 /* AddMarketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMarketsViewController.h; sourceTree = "<group>"; };
 		0E1D73E5195F043300548328 /* AddMarketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMarketsViewController.m; sourceTree = "<group>"; };
 		0E23480519492D1800B60AA6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		0E7059591948E37C007BE558 /* TickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickerCell.h; sourceTree = "<group>"; };
-		0E70595A1948E37C007BE558 /* TickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickerCell.m; sourceTree = "<group>"; };
-		0E70595B1948E37C007BE558 /* Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticker.h; sourceTree = "<group>"; };
-		0E70595C1948E37C007BE558 /* Ticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticker.m; sourceTree = "<group>"; };
-		0E70595D1948E37C007BE558 /* PercentChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentChange.h; sourceTree = "<group>"; };
-		0E70595E1948E37C007BE558 /* PercentChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentChange.m; sourceTree = "<group>"; };
-		0E7059621948E3DD007BE558 /* PriceGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceGraph.h; sourceTree = "<group>"; };
-		0E7059631948E3DD007BE558 /* PriceGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceGraph.m; sourceTree = "<group>"; };
 		0E8670481947F8C100F1023F /* Coins Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coins Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E86704B1947F8C200F1023F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E86704D1947F8C200F1023F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -209,14 +209,14 @@
 		0ED205C51947FA65002FF6C7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E7059621948E3DD007BE558 /* PriceGraph.h */,
-				0E7059631948E3DD007BE558 /* PriceGraph.m */,
-				0E7059591948E37C007BE558 /* TickerCell.h */,
-				0E70595A1948E37C007BE558 /* TickerCell.m */,
-				0E70595B1948E37C007BE558 /* Ticker.h */,
-				0E70595C1948E37C007BE558 /* Ticker.m */,
-				0E70595D1948E37C007BE558 /* PercentChange.h */,
-				0E70595E1948E37C007BE558 /* PercentChange.m */,
+				0E00FE5B1978D9F200E9AA32 /* PriceGraph.h */,
+				0E00FE5C1978D9F200E9AA32 /* PriceGraph.m */,
+				0E00FE5E1978D9FB00E9AA32 /* TickerCell.h */,
+				0E00FE5F1978D9FB00E9AA32 /* TickerCell.m */,
+				0E00FE611978DA0300E9AA32 /* Ticker.h */,
+				0E00FE621978DA0300E9AA32 /* Ticker.m */,
+				0E00FE641978DA0D00E9AA32 /* PercentChange.h */,
+				0E00FE651978DA0D00E9AA32 /* PercentChange.m */,
 				0E1D73E1195C989800548328 /* MarketCell.h */,
 				0E1D73E2195C989800548328 /* MarketCell.m */,
 			);
@@ -371,18 +371,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7059641948E3DD007BE558 /* PriceGraph.m in Sources */,
 				0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */,
 				0ED205D81947FF6D002FF6C7 /* TickersController.m in Sources */,
 				0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */,
 				0EF9BE85195C684B00E67FF4 /* EditMarketsViewController.m in Sources */,
 				0E8670581947F8C200F1023F /* main.m in Sources */,
 				0ED205D01947FCDD002FF6C7 /* Market.m in Sources */,
-				0E7059601948E37C007BE558 /* Ticker.m in Sources */,
 				0E1D73E6195F043300548328 /* AddMarketsViewController.m in Sources */,
-				0E7059611948E37C007BE558 /* PercentChange.m in Sources */,
+				0E00FE5D1978D9F200E9AA32 /* PriceGraph.m in Sources */,
+				0E00FE631978DA0300E9AA32 /* Ticker.m in Sources */,
+				0E00FE601978D9FB00E9AA32 /* TickerCell.m in Sources */,
+				0E00FE661978DA0D00E9AA32 /* PercentChange.m in Sources */,
 				0ED205D41947FF4D002FF6C7 /* PricePoint.m in Sources */,
-				0E70595F1948E37C007BE558 /* TickerCell.m in Sources */,
 				0E1D73E3195C989800548328 /* MarketCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
