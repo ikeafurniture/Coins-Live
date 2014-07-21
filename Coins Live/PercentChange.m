@@ -12,13 +12,13 @@
 
 - (void)updateChange:(CGFloat)change andAmount:(CGFloat)amount
 {
-    if (change  == 100) {
+    if (change == 100) {
         change = 0;
         amount = 0;
     }
-
+    
     if (change == 0) {
-        self.textColor = [UIColor colorWithRed:0.15f green:0.80f blue:0.15f alpha:1];
+        self.textColor = [UIColor colorWithRed:0.60f green:0.60f blue:0.60f alpha:1];
         self.text = @"0.00 (0.00%)";
     }
 

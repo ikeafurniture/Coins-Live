@@ -13,6 +13,6 @@
 @property (nonatomic) CGFloat price;
 @property CGFloat lastPrice;
 @property CGFloat changeInPrice;
-@property (weak) UILabel *colorizedLabel;
+@property (strong) UILabel *colorizedLabel;
 @property BOOL isAnimating;
 @end

@@ -55,6 +55,14 @@
             self.displayName = @"RMBTB";
         else if ([self.exchange isEqualToString:@"fxbtc"])
             self.displayName = @"FXBTC";
+        else if ([self.exchange isEqualToString:@"anxbtc"])
+            self.displayName = @"ANX";
+        else if ([self.exchange isEqualToString:@"itbit"])
+            self.displayName = @"itBit";
+        else if ([self.exchange isEqualToString:@"hitbtc"])
+            self.displayName = @"HitBTC";
+        else if ([self.exchange isEqualToString:@"lakebtc"])
+            self.displayName = @"LakeBTC";
         else
             self.displayName = [self.exchange capitalizedString];
     }

@@ -24,7 +24,8 @@
     [self addPointsToPath:graph inRect:rect];
     //[self drawTickMarks];
     [self setColor];
-    [graph stroke];
+    if ([self.prices count] > 2)
+        [graph stroke];
 }
 
 - (void)drawTickMarks
@@ -65,7 +66,12 @@
 - (void)caluclateHighAndLow {
     self.highPrice = 0;
     self.lowPrice = 100000000;
-    PricePoint *first = [self.prices firstObject];
+    
+    PricePoint *first;
+    if ([self.prices count] > 1)
+        first = self.prices[1];
+    else
+        first = [self.prices firstObject];
     PricePoint *lastPrice = [self.prices lastObject];
 
 

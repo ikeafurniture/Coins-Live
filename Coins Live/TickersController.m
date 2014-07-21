@@ -32,8 +32,6 @@
                           @"btceBTCUSD",
                           @"coinbaseBTCUSD",
                           @"okcoinBTCCNY",
-                          @"btcchinaBTCCNY",
-                          @"btceBTCEUR"
                           ] mutableCopy];
     
     self.marketDataSource = [[OFMarketData alloc] initWithMarkets:self.markets];
@@ -90,7 +88,6 @@
     cell.graph.range = self.range;
     cell.graph.prices = [prices mutableCopy];
     [cell.graph setNeedsDisplay];
-    
     
     return cell;
 }

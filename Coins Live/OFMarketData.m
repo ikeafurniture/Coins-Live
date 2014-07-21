@@ -116,7 +116,7 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
     NSString *range;
-    NSInteger now = [[NSDate date] timeIntervalSince1970];
+    NSInteger now = (NSInteger)[[NSDate date] timeIntervalSince1970];
     
     if (now - self.lastUpdated > 31536000/100)
         range = @"31536000";
@@ -171,7 +171,6 @@
                                        }
                                    }
                                    else {
-                                       NSLog(@"Update failed");
                                        double delayInSeconds = 2.0;
                                        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
                                        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -181,19 +180,29 @@
                                    }
                                }];
     } else {
-        NSLog(@"Unable to serialize the data: %@", error);
         double delayInSeconds = 2.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [self fetchHistoricalPrices];
         });
     }
+    
+    [self.pusherClient connect];
+    for (NSString *m in self.markets) {
+        Market *market = self.markets[m];
+        if (market.subscribed)
+            [self subscribeToMarket:m];
+    }
 }
 
 - (CGFloat)percentChange:(NSString *)market inRange:(NSInteger)range
 {
     Market *m = [self marketWithSymbol:market];
-    PricePoint *firstPrice = [[m pricesInRange:range] firstObject];
+    PricePoint *firstPrice;
+    if ([[m pricesInRange:range] count] > 1)
+        firstPrice = [m pricesInRange:range][1];
+    else
+        firstPrice = [[m pricesInRange:range] firstObject];
     CGFloat amount = m.price - firstPrice.price;
     CGFloat change = amount/m.price*100;
     return change;
@@ -202,7 +211,11 @@
 - (CGFloat)amountChange:(NSString *)market inRange:(NSInteger)range
 {
     Market *m = [self marketWithSymbol:market];
-    PricePoint *firstPrice = [[m pricesInRange:range] firstObject];
+    PricePoint *firstPrice;
+    if ([[m pricesInRange:range] count] > 1)
+        firstPrice = [m pricesInRange:range][1];
+    else
+        firstPrice = [[m pricesInRange:range] firstObject];
     CGFloat amount = m.price - firstPrice.price;
     return amount;
 }
@@ -220,7 +233,7 @@
 {
     self.pusherClient = [PTPusher pusherWithKey:@"772e3efac9290a5818b7" delegate:self encrypted:NO];
     [self.pusherClient bindToEventNamed:@"price" handleWithBlock:^(PTPusherEvent *event) {
-        NSLog(@"%@", event.channel);
+        //NSLog(@"%@", event.channel);
         Market *market = [self marketWithSymbol:event.channel];
         PricePoint *price = [[PricePoint alloc] initWithJSON:event.data];
         [market updatePrice:price];
@@ -233,7 +246,26 @@
 
 - (BOOL)pusher:(PTPusher *)pusher connectionWillAutomaticallyReconnect:(PTPusherConnection *)connection afterDelay:(NSTimeInterval)delay
 {
+    //NSLog(@"WillReconnect");
     return YES;
+}
+
+- (void)pusher:(PTPusher *)pusher connection:(PTPusherConnection *)connection didDisconnectWithError:(NSError *)error willAttemptReconnect:(BOOL)willAttemptReconnect
+{
+    //NSLog(@"DidDisconnect");
+    [self.pusherClient connect];
+    for (NSString *m in self.markets) {
+        Market *market = self.markets[m];
+        if (market.subscribed) {
+            //NSLog(@"Subscribing to %@", market.symbol);
+            [self subscribeToMarket:m];
+        }
+    }
+}
+
+- (void)pusher:(PTPusher *)pusher connectionDidConnect:(PTPusherConnection *)connection
+{
+    //NSLog(@"CONNECTED");
 }
 
 - (void)loadMarkets:(NSArray *)markets
@@ -249,18 +281,34 @@
 
 - (void)fetchAvailableMarkets
 {
-    NSArray *temp = @[@"bitstampBTCUSD",
+    NSArray *temp = @[//@"anxbtcBTCHKD",
+                      //@"anxbtcBTCJPY",
+                      @"bitstampBTCUSD",
                       @"btceBTCUSD",
-                      @"coinbaseBTCUSD",
-                      @"bitfinexBTCUSD",
-                      @"lakebtcBTCUSD",
-                      @"campbxBTCUSD",
-                      @"btcchinaBTCCNY",
-                      @"okcoinBTCCNY",
                       @"btceBTCEUR",
+                      @"btceBTCRUR",
+                      @"bitcurexBTCEUR",
                       @"bitcurexBTCPLN",
-                      @"virtexBTCCAD",
-                      @"bit2cBTCNIS"];
+                      
+                      @"bitfinexBTCUSD",
+                      @"btcchinaBTCCNY",
+                      @"campbxBTCUSD",
+                      @"coinbaseBTCUSD",
+                      
+                      @"huobiBTCCNY",
+                      @"hitbtcBTCUSD",
+                      @"hitbtcBTCEUR",
+                      @"itbitBTCUSD",
+                      
+                      @"lakebtcBTCUSD",
+                      @"okcoinBTCCNY",
+                      
+                      
+                      @"bit2cBTCNIS",
+                      @"krakenBTCUSD",
+                      @"krakenBTCEUR",
+                      @"virtexBTCCAD"];
+    
     
     for (NSString *symbol in temp) {
         Market *market = [[Market alloc] initWithSymbol:symbol];

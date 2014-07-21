@@ -91,7 +91,6 @@
         dest.marketDataSource = self.marketDataSource;
         dest.addMarket = self;
         dest.markets = [[self.marketDataSource availableMarkets] mutableCopy];
-        
     }
 }
 

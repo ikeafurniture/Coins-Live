@@ -5,14 +5,14 @@
       "idiom" : "iphone",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "smalllaunch-1.png",
+      "filename" : "iOS Simulator Screen shot Jul 18, 2014, 12.45.39 AM.png",
       "scale" : "2x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "retina4",
-      "filename" : "launch.png",
+      "filename" : "iOS Simulator Screen shot Jul 18, 2014, 12.41.02 AM-1.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
       "scale" : "2x"
@@ -55,14 +55,14 @@
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "smalllaunch.png",
+      "filename" : "iOS Simulator Screen shot Jul 18, 2014, 12.45.39 AM-1.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
-      "filename" : "launch-1.png",
+      "filename" : "iOS Simulator Screen shot Jul 18, 2014, 12.41.02 AM.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },
