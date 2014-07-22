@@ -11,21 +11,20 @@
 		0E00FE601978D9FB00E9AA32 /* TickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE5F1978D9FB00E9AA32 /* TickerCell.m */; };
 		0E00FE631978DA0300E9AA32 /* Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE621978DA0300E9AA32 /* Ticker.m */; };
 		0E00FE661978DA0D00E9AA32 /* PercentChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E00FE651978DA0D00E9AA32 /* PercentChange.m */; };
+		0E09A08F197DFA24000F0A87 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E09A08E197DFA24000F0A87 /* iPhone.storyboard */; };
 		0E1D73E3195C989800548328 /* MarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E2195C989800548328 /* MarketCell.m */; };
 		0E1D73E6195F043300548328 /* AddMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D73E5195F043300548328 /* AddMarketsViewController.m */; };
-		0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E23480519492D1800B60AA6 /* iPhone.storyboard */; };
 		0E86704C1947F8C200F1023F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704B1947F8C200F1023F /* Foundation.framework */; };
 		0E86704E1947F8C200F1023F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704D1947F8C200F1023F /* CoreGraphics.framework */; };
 		0E8670501947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
-		0E8670561947F8C200F1023F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E8670541947F8C200F1023F /* InfoPlist.strings */; };
 		0E8670581947F8C200F1023F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8670571947F8C200F1023F /* main.m */; };
 		0E86705C1947F8C200F1023F /* OFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E86705B1947F8C200F1023F /* OFAppDelegate.m */; };
 		0E86705E1947F8C200F1023F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E86705D1947F8C200F1023F /* Images.xcassets */; };
 		0E8670651947F8C200F1023F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8670641947F8C200F1023F /* XCTest.framework */; };
 		0E8670661947F8C200F1023F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704B1947F8C200F1023F /* Foundation.framework */; };
 		0E8670671947F8C200F1023F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E86704F1947F8C200F1023F /* UIKit.framework */; };
-		0E86706F1947F8C200F1023F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E86706D1947F8C200F1023F /* InfoPlist.strings */; };
 		0E8670711947F8C200F1023F /* Coins_LiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8670701947F8C200F1023F /* Coins_LiveTests.m */; };
+		0ECF1573197DBE41004ABD12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ECF1571197DBE41004ABD12 /* InfoPlist.strings */; };
 		0ED205C91947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
 		0ED205CA1947FA93002FF6C7 /* OFMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205C81947FA93002FF6C7 /* OFMarketData.m */; };
 		0ED205D01947FCDD002FF6C7 /* Market.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED205CF1947FCDD002FF6C7 /* Market.m */; };
@@ -57,18 +56,17 @@
 		0E00FE621978DA0300E9AA32 /* Ticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticker.m; sourceTree = "<group>"; };
 		0E00FE641978DA0D00E9AA32 /* PercentChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentChange.h; sourceTree = "<group>"; };
 		0E00FE651978DA0D00E9AA32 /* PercentChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentChange.m; sourceTree = "<group>"; };
+		0E09A08E197DFA24000F0A87 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		0E1D73E1195C989800548328 /* MarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCell.h; sourceTree = "<group>"; };
 		0E1D73E2195C989800548328 /* MarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCell.m; sourceTree = "<group>"; };
 		0E1D73E4195F043300548328 /* AddMarketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMarketsViewController.h; sourceTree = "<group>"; };
 		0E1D73E5195F043300548328 /* AddMarketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMarketsViewController.m; sourceTree = "<group>"; };
-		0E23480519492D1800B60AA6 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		0E8670481947F8C100F1023F /* Coins Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coins Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E86704B1947F8C200F1023F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E86704D1947F8C200F1023F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0E86704F1947F8C200F1023F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E8670531947F8C200F1023F /* Coins Live-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Coins Live-Info.plist"; sourceTree = "<group>"; };
-		0E8670551947F8C200F1023F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0E8670571947F8C200F1023F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E8670571947F8C200F1023F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E8670591947F8C200F1023F /* Coins Live-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coins Live-Prefix.pch"; sourceTree = "<group>"; };
 		0E86705A1947F8C200F1023F /* OFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OFAppDelegate.h; sourceTree = "<group>"; };
 		0E86705B1947F8C200F1023F /* OFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OFAppDelegate.m; sourceTree = "<group>"; };
@@ -76,8 +74,8 @@
 		0E8670631947F8C200F1023F /* Coins LiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coins LiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8670641947F8C200F1023F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0E86706C1947F8C200F1023F /* Coins LiveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Coins LiveTests-Info.plist"; sourceTree = "<group>"; };
-		0E86706E1947F8C200F1023F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E8670701947F8C200F1023F /* Coins_LiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Coins_LiveTests.m; sourceTree = "<group>"; };
+		0ECF1572197DBE41004ABD12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0ED205C71947FA93002FF6C7 /* OFMarketData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFMarketData.h; sourceTree = "<group>"; };
 		0ED205C81947FA93002FF6C7 /* OFMarketData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFMarketData.m; sourceTree = "<group>"; };
 		0ED205CE1947FCDD002FF6C7 /* Market.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Market.h; sourceTree = "<group>"; };
@@ -152,9 +150,9 @@
 		0E8670511947F8C200F1023F /* Coins Live */ = {
 			isa = PBXGroup;
 			children = (
+				0E09A08E197DFA24000F0A87 /* iPhone.storyboard */,
 				0E86705A1947F8C200F1023F /* OFAppDelegate.h */,
 				0E86705B1947F8C200F1023F /* OFAppDelegate.m */,
-				0E23480519492D1800B60AA6 /* iPhone.storyboard */,
 				0ED205C61947FA69002FF6C7 /* Controllers */,
 				0ED205C41947FA53002FF6C7 /* Models */,
 				0ED205C51947FA65002FF6C7 /* Views */,
@@ -167,8 +165,8 @@
 		0E8670521947F8C200F1023F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0ECF1571197DBE41004ABD12 /* InfoPlist.strings */,
 				0E8670531947F8C200F1023F /* Coins Live-Info.plist */,
-				0E8670541947F8C200F1023F /* InfoPlist.strings */,
 				0E8670571947F8C200F1023F /* main.m */,
 				0E8670591947F8C200F1023F /* Coins Live-Prefix.pch */,
 			);
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				0E86706C1947F8C200F1023F /* Coins LiveTests-Info.plist */,
-				0E86706D1947F8C200F1023F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -300,6 +297,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
+				Base,
 			);
 			mainGroup = 0E86703F1947F8C100F1023F;
 			productRefGroup = 0E8670491947F8C100F1023F /* Products */;
@@ -317,9 +316,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8670561947F8C200F1023F /* InfoPlist.strings in Resources */,
-				0E23480619492D1800B60AA6 /* iPhone.storyboard in Resources */,
 				0E86705E1947F8C200F1023F /* Images.xcassets in Resources */,
+				0ECF1573197DBE41004ABD12 /* InfoPlist.strings in Resources */,
+				0E09A08F197DFA24000F0A87 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E86706F1947F8C200F1023F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,18 +408,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0E8670541947F8C200F1023F /* InfoPlist.strings */ = {
+		0ECF1571197DBE41004ABD12 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0E8670551947F8C200F1023F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0E86706D1947F8C200F1023F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E86706E1947F8C200F1023F /* en */,
+				0ECF1572197DBE41004ABD12 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -63,6 +63,10 @@
             self.displayName = @"HitBTC";
         else if ([self.exchange isEqualToString:@"lakebtc"])
             self.displayName = @"LakeBTC";
+        else if ([self.exchange isEqualToString:@"btcde"])
+            self.displayName = @"Bitcoin.de";
+        else if ([self.exchange isEqualToString:@"1coin"])
+            self.displayName = @"1Coin";
         else
             self.displayName = [self.exchange capitalizedString];
     }

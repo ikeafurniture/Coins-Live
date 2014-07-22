@@ -14,6 +14,7 @@
 @property NSMutableDictionary *markets;
 @property PTPusher *pusherClient;
 @property NSInteger lastUpdated;
+@property BOOL fetchedPrice;
 @end
 
 @implementation OFMarketData
@@ -115,22 +116,8 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-    NSString *range;
-    NSInteger now = (NSInteger)[[NSDate date] timeIntervalSince1970];
-    
-    if (now - self.lastUpdated > 31536000/100)
-        range = @"31536000";
-    else if (now - self.lastUpdated > 2592000/100)
-        range = @"2592000";
-    else if (now - self.lastUpdated > 604800/100)
-        range = @"604800";
-    else if (now - self.lastUpdated > 86400/100)
-        range = @"86400";
-    else if (now - self.lastUpdated > 3600/100)
-        range = @"3600";
-    
     NSError *error = nil;
-    NSData *json = [NSJSONSerialization dataWithJSONObject:@{@"markets": [self subscribedMarkets], @"range": range}
+    NSData *json = [NSJSONSerialization dataWithJSONObject:@{@"markets": [self subscribedMarkets]}
                                                    options:0
                                                      error:&error];
     
@@ -138,8 +125,10 @@
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:@"http://history.coinslive.io/prices"]];
         [request setHTTPMethod:@"POST"];
-        [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[json length]] forHTTPHeaderField:@"Content-Length"];
-        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[json length]]
+       forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/json"
+       forHTTPHeaderField:@"Content-Type"];
         [request setHTTPBody:json];
         
         NSDictionary *ranges = @{@"h": @3600,
@@ -152,10 +141,14 @@
         [NSURLConnection sendAsynchronousRequest: request
                                            queue: [NSOperationQueue mainQueue]
                                completionHandler: ^(NSURLResponse *r, NSData *data, NSError *error) {
+                                   
                                    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                   
                                    NSError *err = nil;
                                    if (data) {
-                                       NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+                                       NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data
+                                                                                           options:0
+                                                                                             error:&err];
                                        for (NSString *m in res) {
                                            Market *market = [self.markets objectForKey:m];
                                            for (NSString *range2 in res[m]) {
@@ -169,6 +162,7 @@
                                                                                              userInfo:@{@"symbol": market.symbol}];
                                            //self.lastUpdated = [[NSDate date] timeIntervalSince1970];
                                        }
+                                       self.fetchedPrice = YES;
                                    }
                                    else {
                                        double delayInSeconds = 2.0;
@@ -234,12 +228,15 @@
     self.pusherClient = [PTPusher pusherWithKey:@"772e3efac9290a5818b7" delegate:self encrypted:NO];
     [self.pusherClient bindToEventNamed:@"price" handleWithBlock:^(PTPusherEvent *event) {
         //NSLog(@"%@", event.channel);
-        Market *market = [self marketWithSymbol:event.channel];
-        PricePoint *price = [[PricePoint alloc] initWithJSON:event.data];
-        [market updatePrice:price];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"price"
-                                                            object:nil
-                                                          userInfo:@{@"symbol": market.symbol}];
+        if (self.fetchedPrice) {
+            Market *market = [self marketWithSymbol:event.channel];
+            PricePoint *price = [[PricePoint alloc] initWithJSON:event.data];
+            [market updatePrice:price];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"price"
+                                                                object:nil
+                                                              userInfo:@{@"symbol": market.symbol}];
+        }
+        
     }];
     [self.pusherClient connect];
 }
@@ -283,6 +280,8 @@
 {
     NSArray *temp = @[//@"anxbtcBTCHKD",
                       //@"anxbtcBTCJPY",
+                      
+                      @"1coinBTCUSD",
                       @"bitstampBTCUSD",
                       @"btceBTCUSD",
                       @"btceBTCEUR",
@@ -292,6 +291,7 @@
                       
                       @"bitfinexBTCUSD",
                       @"btcchinaBTCCNY",
+                      @"btcdeBTCEUR",
                       @"campbxBTCUSD",
                       @"coinbaseBTCUSD",
                       
@@ -301,7 +301,11 @@
                       @"itbitBTCUSD",
                       
                       @"lakebtcBTCUSD",
+                      @"localbtcBTCUSD",
+                      @"localbtcBTCGBP",
                       @"okcoinBTCCNY",
+                      
+                      @"korbitBTCKRW",
                       
                       
                       @"bit2cBTCNIS",

@@ -38,6 +38,8 @@
     [self recursivelyReloadGraphs];
     
     
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(price:)
                                                  name:@"price"

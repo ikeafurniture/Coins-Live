@@ -31,6 +31,7 @@
     NSString *currency = [self.marketDataSource currency:market];
     NSString *item = [self.marketDataSource item:market];
     
+    cell.name.adjustsFontSizeToFitWidth = YES;
     cell.name.text = displayName;
     cell.currency.text = [NSString stringWithFormat:@"%@/%@", currency, item];
     
