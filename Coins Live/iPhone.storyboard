@@ -45,14 +45,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Bitstamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGg-gN-lq9" userLabel="Name">
-                                                    <rect key="frame" x="5" y="-1" width="155" height="30"/>
+                                                    <rect key="frame" x="5" y="-1" width="155" height="28"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="-3"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="$838.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LH2-PP-dut" userLabel="Ticker" customClass="Ticker">
-                                                    <rect key="frame" x="160" y="0.0" width="155" height="30"/>
+                                                    <rect key="frame" x="160" y="0.0" width="155" height="28"/>
                                                     <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="0.1478102189781022" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
@@ -81,7 +81,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="yoI-yD-Nli" secondAttribute="trailing" id="icl-L6-4AJ"/>
                                                 <constraint firstItem="MV3-N7-Y9a" firstAttribute="top" secondItem="cGg-gN-lq9" secondAttribute="bottom" constant="-4" id="muW-ac-EJN"/>
                                                 <constraint firstAttribute="bottom" secondItem="yoI-yD-Nli" secondAttribute="bottom" id="nCZ-MR-Zwe"/>
-                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" constant="-1" id="o7f-DS-HUT"/>
+                                                <constraint firstItem="cGg-gN-lq9" firstAttribute="top" secondItem="moZ-Di-mne" secondAttribute="top" id="o7f-DS-HUT"/>
                                                 <constraint firstAttribute="trailing" secondItem="LH2-PP-dut" secondAttribute="trailing" constant="6" id="omr-17-FQY"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -223,7 +223,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration" label="Settings"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
-                                            <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                            <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="5" maxY="0.0"/>
                                             <state key="normal" image="edit">
                                                 <color key="titleColor" white="0.5037636861" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5037636861" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -297,7 +297,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BTC/USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-i9-wzX">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BTC/USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-i9-wzX">
                                             <rect key="frame" x="190" y="15" width="110" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
@@ -309,6 +309,7 @@
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="m6I-i9-wzX" secondAttribute="centerY" constant="-0.5" id="8kf-gm-126"/>
                                         <constraint firstAttribute="centerY" secondItem="FeD-ga-q3K" secondAttribute="centerY" constant="-0.5" id="MIE-f1-EaB"/>
+                                        <constraint firstAttribute="trailing" secondItem="m6I-i9-wzX" secondAttribute="trailing" constant="20" id="NDy-48-CD3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.043137254901960784" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>

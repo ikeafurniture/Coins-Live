@@ -69,6 +69,8 @@
             self.displayName = @"1Coin";
         else
             self.displayName = [self.exchange capitalizedString];
+        
+        [self recursivelyRemoveOldPrices];
     }
     return self;
 }
@@ -88,6 +90,8 @@
         self.weekPrices = [@[] mutableCopy];
         self.monthPrices = [@[] mutableCopy];
         self.yearPrices = [@[] mutableCopy];
+        
+        [self recursivelyRemoveOldPrices];
     }
     return self;
 }
@@ -130,6 +134,21 @@
         [oldPrices removeIndex:[oldPrices count] -1];
         [prices removeObjectsAtIndexes:[oldPrices copy]];
     }
+}
+
+- (void)recursivelyRemoveOldPrices
+{
+#warning WEIRD and a bit of a performance hit
+    double delayInSeconds = 300;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self removeOldPrices:self.hourPrices fromRange:3600];
+        [self removeOldPrices:self.dayPrices fromRange:86400];
+        [self removeOldPrices:self.weekPrices fromRange:604800];
+        [self removeOldPrices:self.monthPrices fromRange:2592000];
+        [self removeOldPrices:self.yearPrices fromRange:31536000];
+        [self recursivelyRemoveOldPrices];
+    });
 }
 
 

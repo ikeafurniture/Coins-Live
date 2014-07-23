@@ -23,12 +23,12 @@
     }
 
     else if (change  > 0 && change < 100000) {
-        self.textColor = [UIColor colorWithRed:0.15f green:0.80f blue:0.15f alpha:1];
+        self.textColor = [UIColor colorWithRed:0 green:0.863f blue:0 alpha:1];
         self.text = [NSString stringWithFormat:@"+%.02f (%.02f%%)", amount, change];
     }
     
     else if (change  < 0 && change  > -100000) {
-        self.textColor = [UIColor colorWithRed:0.85f green:0.05f blue:0.05f alpha:1];
+        self.textColor = [UIColor colorWithRed:0.95f green:0 blue:0 alpha:1];
         self.text = [NSString stringWithFormat:@"%.02f (%.02f%%)", amount, 0-change];
     }
 

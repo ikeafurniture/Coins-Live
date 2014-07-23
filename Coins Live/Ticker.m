@@ -18,8 +18,8 @@
         _price = price;
 
         if (self.changeInPrice != price) {
-            UIColor *green = [UIColor colorWithRed:0.15f green:0.80f blue:0.15f alpha:1];
-            UIColor *red = [UIColor colorWithRed:0.85f green:0.05f blue:0.05f alpha:1];
+            UIColor *green = [UIColor colorWithRed:0 green:0.863f blue:0 alpha:1];
+            UIColor *red = [UIColor colorWithRed:0.95f green:0 blue:0 alpha:1];
             if (self.changeInPrice > 0)
                 [self animateWithColor:green
                                  price:price

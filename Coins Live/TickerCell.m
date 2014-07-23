@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.graph = [[PriceGraph alloc] init];
+        self.ticker = [[Ticker alloc] init];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;

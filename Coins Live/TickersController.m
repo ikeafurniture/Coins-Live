@@ -86,6 +86,7 @@
     
     cell.name.textColor = [UIColor whiteColor];
     
+    
     //Graph
     cell.graph.range = self.range;
     cell.graph.prices = [prices mutableCopy];

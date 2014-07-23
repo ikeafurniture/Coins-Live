@@ -17,7 +17,7 @@
 
 - (void)drawGraphInRect:(CGRect)rect {
     UIBezierPath *graph  = [UIBezierPath bezierPath];
-    graph.lineWidth = 1;
+    graph.lineWidth = 1.1;
     graph.lineJoinStyle = kCGLineJoinBevel;
     graph.lineCapStyle = kCGLineCapSquare;
     [self caluclateHighAndLow];
@@ -117,8 +117,8 @@
 }
 
 - (void)setColor {
-    UIColor *greenColor = [UIColor colorWithRed:0.15f green:0.80f blue:0.15f alpha:1];
-    UIColor *redColor = [UIColor colorWithRed:0.85f green:0.05f blue:0.05f alpha:1];
+    UIColor *greenColor = [UIColor colorWithRed:0 green:0.863f blue:0 alpha:1];
+    UIColor *redColor = [UIColor colorWithRed:0.95f green:0 blue:0 alpha:1];
     (self.change >= 0) ? [greenColor setStroke] : [redColor setStroke];
 }
 

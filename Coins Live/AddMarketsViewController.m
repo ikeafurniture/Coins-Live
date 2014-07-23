@@ -29,7 +29,7 @@
     cell.editingAccessoryType = UITableViewCellAccessoryCheckmark;
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:0.15f green:0.15f blue:0.15f alpha:1];
+    bgColorView.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:1];
     [cell setSelectedBackgroundView:bgColorView];
     
     return cell;

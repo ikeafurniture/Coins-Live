@@ -100,9 +100,9 @@
   
     [self.markets addObject:market];
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.markets count]-1 inSection:0]]
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
+                          withRowAnimation:UITableViewRowAnimationNone];
     [self.editingTableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.markets count]-1 inSection:0]]
-                                 withRowAnimation:UITableViewRowAnimationAutomatic];
+                                 withRowAnimation:UITableViewRowAnimationNone];
     [self.marketDataSource subscribeToMarket:market];
     [self.marketDataSource fetchHistoricalPrices];
     
